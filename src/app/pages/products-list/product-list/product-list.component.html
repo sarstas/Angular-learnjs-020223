@@ -1,5 +1,18 @@
-<ng-template let-productFtomTemplate="ngIf" [ngIf]="getProducts()">
+<ng-template
+	let-productFtomTemplate="ngIf"
+	[ngIf]="getProducts()"
+	[ngIfElse]="loaderTemplateRef"
+>
 	<div appScrollWithLoading class="scroll-container">
-		<!--    (loadData)="onLoadData($event)"-->
+		<!--      (loadData)="onLoadData($event)"-->
+		<app-product-card
+			#card
+			class="card"
+			[product]="productFtomTemplate[0]"
+		></app-product-card>
 	</div>
+</ng-template>
+
+<ng-template #loaderTemplateRef>
+	<mat-spinner class="loader"></mat-spinner>
 </ng-template>

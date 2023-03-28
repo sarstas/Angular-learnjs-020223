@@ -10,12 +10,12 @@ import { ProductCardModule } from './pages/products-list/product-card/product-ca
 import { PopupHostComponent } from './core/popup-host/popup-host.component';
 import { PopupHostModule } from './core/popup-host/popup-host.module';
 import { MatIconModule } from '@angular/material/icon';
-import { ScrollWithLoadingDirective } from './shared/scroll-with-loading/scroll-with-loading.directive';
+// import { ScrollWithLoadingDirective } from './shared/scroll-with-loading/scroll-with-loading.directive';
 import { MatListModule } from '@angular/material/list';
 import { ProductListModule } from './pages/products-list/product-list/product-list.module';
 
 @NgModule({
-	declarations: [AppComponent, ScrollWithLoadingDirective],
+	declarations: [AppComponent],
 	imports: [
 		BrowserModule,
 		AppRoutingModule,
