@@ -1,10 +1,9 @@
 <mat-drawer-container autosize class="example-container">
-	<mat-drawer mode="side" class="example-sidenav" [opened]="isOpened">
-		<p>Auto-resizing sidenav</p>
+	<mat-drawer mode="side" class="example-sidenav">
+		<ng-content select="sidenav"></ng-content>
 	</mat-drawer>
 
-	<app-product-card
-		[product]="products"
-		(productBuy)="buyProducts($event)"
-	></app-product-card>
+	<div class="example-sidenav-content">
+		<ng-content></ng-content>
+	</div>
 </mat-drawer-container>

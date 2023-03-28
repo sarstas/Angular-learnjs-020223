@@ -1,20 +1,37 @@
 <app-header
 	[applicationConfig]="applicationConfig"
-	(click)="onClick($event)"
-	(menuClick)="toggleSidenavOpened()"
+	(menuClick)="sidenav.toggleSidenavOpened()"
 ></app-header>
 
-<app-sidenav
-	[products]="product"
-	[(isOpened)]="isSidenavOpened"
-	(buyProduct)="showPopUp($event)"
-></app-sidenav>
+<app-sidenav #sidenav>
+	<ng-container ngProjectAs="sidenav">
+		<h2>{{ applicationConfig.title }}</h2>
+		<mat-list role="list">
+			<mat-list-item #list appInsertShadow role="listitem"
+				>Item 1</mat-list-item
+			>
+			<mat-list-item
+				#list
+				appInsertShadow
+				role="listitem"
+				(contextmenu)="$event.preventDefault()"
+			>
+				Item 2
+			</mat-list-item>
+			<mat-list-item #list appInsertShadow role="listitem"
+				>Item 3</mat-list-item
+			>
+		</mat-list>
+	</ng-container>
 
-<app-popup-host
-	[template]="needViewPopup ? template : undefined"
-></app-popup-host>
+	<app-product-list></app-product-list>
+</app-sidenav>
 
-<ng-template #template>
-	<h1>Buy a product</h1>
-	<mat-icon (click)="showPopUp(false)">highlight_off</mat-icon>
-</ng-template>
+<!--<app-popup-host-->
+<!--	[template]="needViewPopup ? template : undefined"-->
+<!--&gt;</app-popup-host>-->
+
+<!--<ng-template #template>-->
+<!--	<h1>Buy a product</h1>-->
+<!--	<mat-icon (click)="showPopUp(false)">highlight_off</mat-icon>-->
+<!--</ng-template>-->

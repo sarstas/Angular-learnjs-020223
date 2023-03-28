@@ -10,16 +10,11 @@ import { applicationConfigMock } from '../../shared/application-config/applicati
 	// inputs: ['applicationConfig'],
 })
 export class HeaderComponent {
-	// @Input('config')
-	@Input()
-	applicationConfig: IApplicationConfig | undefined;
+	@Input() applicationConfig: IApplicationConfig | undefined;
 
-	@Output()
-	menuClick = new EventEmitter<string>();
+	@Output() menuClick = new EventEmitter<string>();
 
-	onClick() {
-		// event.stopPropagation();
-		console.log('Menu click');
+	public onClick() {
 		this.menuClick.emit('click');
 	}
 }

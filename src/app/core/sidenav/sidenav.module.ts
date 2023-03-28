@@ -3,11 +3,11 @@ import { CommonModule } from '@angular/common';
 import { SidenavComponent } from './sidenav.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatButtonModule } from '@angular/material/button';
-import { ProductListModule } from '../../pages/products-list/product-list.module';
+import { ProductCardModule } from '../../pages/products-list/product-card/product-card.module';
 
 @NgModule({
 	declarations: [SidenavComponent],
-	imports: [CommonModule, MatSidenavModule, MatButtonModule, ProductListModule],
+	imports: [CommonModule, MatSidenavModule, MatButtonModule, ProductCardModule],
 	exports: [SidenavComponent],
 })
 export class SidenavModule {}
