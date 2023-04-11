@@ -31,6 +31,10 @@ export class ProductListComponent implements OnInit, AfterViewInit {
 		});
 	}
 
+	public onLoadData(direction: LoadDirection) {
+		console.log(direction);
+	}
+
 	public getProducts(): IProduct[] | undefined {
 		return this.products;
 	}
