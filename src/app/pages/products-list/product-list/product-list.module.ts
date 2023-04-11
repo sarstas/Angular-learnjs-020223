@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { ProductCardComponent } from '../product-card/product-card.component';
 import { ProductListComponent } from './product-list.component';
 import { CommonModule } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
@@ -9,6 +8,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { ProductCardModule } from '../product-card/product-card.module';
+import { ScrollWithLoadingModule } from '../../../shared/scroll-with-loading/scroll-with-loading.module';
 
 @NgModule({
 	declarations: [ProductListComponent],
@@ -22,6 +22,7 @@ import { ProductCardModule } from '../product-card/product-card.module';
 		MatButtonModule,
 		MatProgressSpinnerModule,
 		ProductCardModule,
+		ScrollWithLoadingModule,
 	],
 })
 export class ProductListModule {}

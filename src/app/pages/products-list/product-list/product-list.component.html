@@ -3,8 +3,43 @@
 	[ngIf]="getProducts()"
 	[ngIfElse]="loaderTemplateRef"
 >
-	<div appScrollWithLoading class="scroll-container">
-		<!--			(loadData)="onLoadData($event)"-->
+	<div
+		appScrollWithLoading
+		class="scroll-container"
+		(loadData)="onLoadData($event)"
+	>
+		<app-product-card
+			#card
+			class="card"
+			[product]="productFtomTemplate[0]"
+		></app-product-card>
+		<app-product-card
+			#card
+			class="card"
+			[product]="productFtomTemplate[1]"
+		></app-product-card>
+		<app-product-card
+			#card
+			class="card"
+			[product]="productFtomTemplate[2]"
+		></app-product-card>
+		<app-product-card
+			#card
+			class="card"
+			[product]="productFtomTemplate[3]"
+		></app-product-card>
+		<app-product-card
+			#card
+			class="card"
+			[product]="productFtomTemplate[4]"
+		></app-product-card>
+
+		<app-product-card
+			#card
+			class="card"
+			[product]="productFtomTemplate[5]"
+		></app-product-card>
+
 		<app-product-card
 			#card
 			class="card"

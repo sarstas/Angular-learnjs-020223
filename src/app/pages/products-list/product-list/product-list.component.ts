@@ -1,5 +1,4 @@
 import { AfterViewInit, Component, OnInit, QueryList, ViewChildren } from '@angular/core';
-import { of } from 'rxjs';
 import { LoadDirection } from 'src/app/shared/scroll-with-loading/load-direction.const';
 import { IProduct } from '../../../shared/products/product.interface';
 import { productsMock } from '../../../shared/products/product.mock';
